@@ -6,7 +6,7 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <ui:composition template="/template.xhtml">
-        <ui:define name="title">
+        <ui:define name="Crear una nueva tarea">
             <h:outputText value="#{bundle.CreateJobsTitle}"></h:outputText>
         </ui:define>
         <ui:define name="body">
@@ -15,21 +15,19 @@
             </h:panelGroup>
             <h:form>
                 <h:panelGrid columns="2">
-                    <h:outputLabel value="#{bundle.CreateJobsLabel_jobId}" for="jobId" />
-                    <h:inputText id="jobId" value="#{jobsController.selected.jobId}" title="#{bundle.CreateJobsTitle_jobId}" required="true" requiredMessage="#{bundle.CreateJobsRequiredMessage_jobId}"/>
-                    <h:outputLabel value="#{bundle.CreateJobsLabel_name}" for="name" />
+                    <h:outputLabel value="Nombre" for="name" />
                     <h:inputText id="name" value="#{jobsController.selected.name}" title="#{bundle.CreateJobsTitle_name}" />
-                    <h:outputLabel value="#{bundle.CreateJobsLabel_description}" for="description" />
+                    <h:outputLabel value="Descripcion" for="description" />
                     <h:inputText id="description" value="#{jobsController.selected.description}" title="#{bundle.CreateJobsTitle_description}" />
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{jobsController.create}" value="#{bundle.CreateJobsSaveLink}" />
+                <h:commandLink action="#{jobsController.create}" value="Guardar" />
                 <br />
                 <br />
-                <h:commandLink action="#{jobsController.prepareList}" value="#{bundle.CreateJobsShowAllLink}" immediate="true"/>
+                <h:commandLink action="#{jobsController.prepareList}" value="Ver lista de tareas" immediate="true"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.CreateJobsIndexLink}"/>
+                <h:link outcome="/index" value="Volver a pagina principal"/>
             </h:form>
         </ui:define>
     </ui:composition>

@@ -7,7 +7,7 @@
 
     <ui:composition template="/template.xhtml">
         <ui:define name="title">
-            <h:outputText value="#{bundle.ViewJobsTitle}"></h:outputText>
+            <h:outputText value="Ver tarea"></h:outputText>
         </ui:define>
         <ui:define name="body">
             <h:panelGroup id="messagePanel" layout="block">
@@ -15,25 +15,25 @@
             </h:panelGroup>
             <h:form>
                 <h:panelGrid columns="2">
-                    <h:outputText value="#{bundle.ViewJobsLabel_jobId}"/>
+                    <h:outputText value="#"/>
                     <h:outputText value="#{jobsController.selected.jobId}" title="#{bundle.ViewJobsTitle_jobId}"/>
-                    <h:outputText value="#{bundle.ViewJobsLabel_name}"/>
+                    <h:outputText value="Nombre"/>
                     <h:outputText value="#{jobsController.selected.name}" title="#{bundle.ViewJobsTitle_name}"/>
-                    <h:outputText value="#{bundle.ViewJobsLabel_description}"/>
+                    <h:outputText value="Descripcion"/>
                     <h:outputText value="#{jobsController.selected.description}" title="#{bundle.ViewJobsTitle_description}"/>
                 </h:panelGrid>
                 <br />
-                <h:commandLink action="#{jobsController.destroyAndView}" value="#{bundle.ViewJobsDestroyLink}"/>
+                <h:commandLink action="#{jobsController.destroyAndView}" value="Eliminar"/>
                 <br />
                 <br />
-                <h:link outcome="Edit" value="#{bundle.ViewJobsEditLink}"/>
+                <h:link outcome="Edit" value="Editar"/>
                 <br />
-                <h:commandLink action="#{jobsController.prepareCreate}" value="#{bundle.ViewJobsCreateLink}" />
+                <h:commandLink action="#{jobsController.prepareCreate}" value="Crear nueva tarea" />
                 <br />
-                <h:commandLink action="#{jobsController.prepareList}" value="#{bundle.ViewJobsShowAllLink}"/>
+                <h:commandLink action="#{jobsController.prepareList}" value="Ver lista de tareas"/>
                 <br />
                 <br />
-                <h:link outcome="/index" value="#{bundle.ViewJobsIndexLink}"/>
+                <h:link outcome="/index" value="Volver a  pagina principal"/>
 
             </h:form>
         </ui:define>
