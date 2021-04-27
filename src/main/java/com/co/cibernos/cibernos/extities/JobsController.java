@@ -80,10 +80,10 @@ public class JobsController implements Serializable {
     public String create() {
         try {
             getFacade().create(current);
-            JsfUtil.addSuccessMessage("Tarea creada con exito");
+            JsfUtil.addSuccessMessage(ResourceBundle.getBundle("/Bundle").getString("JobsCreated"));
             return prepareCreate();
         } catch (Exception e) {
-            JsfUtil.addErrorMessage("Ups ha ocurrido un error al crear la tarea, por favor vuelva a intentar.");
+            JsfUtil.addErrorMessage(e, ResourceBundle.getBundle("/Bundle").getString("PersistenceErrorOccured"));
             return null;
         }
     }
