@@ -1,5 +1,9 @@
 package com.co.cibernos.cibernos.extities;
 
+/*
+ * Clase controller desde donde se gestiona todos los movimientos de las paginas
+*/
+
 import com.co.cibernos.cibernos.extities.util.JsfUtil;
 import com.co.cibernos.cibernos.extities.util.PaginationHelper;
 
